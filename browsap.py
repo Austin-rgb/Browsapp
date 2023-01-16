@@ -472,16 +472,3 @@ class TextArea(Widget):
     def get_html(self):
         return f'<textarea class = "c{self.id}"></textarea>'
 
-class MyActivity(Activity):
-    def __init__(self,*args):
-        super(MyActivity, self).__init__(*args)
-    bt=Button()
-    title='Hello theree'
-    bt.style('{background-color:#aaaa;}')
-    bt.set_text('Hello there')
-    bt.events['onclick']=foo
-    view=Widget()
-    view.add(bt)
-        
-app=App(('',8000),MyActivity)
-app.serve_forever()
